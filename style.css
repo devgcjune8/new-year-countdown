@@ -111,7 +111,7 @@ svg rect {
 
 @media (max-width: 600px) {
     .countdown {
-        display: flex;
+        display: none;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
