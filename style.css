@@ -108,3 +108,19 @@ svg rect {
         stroke-dashoffset: 250%;
     }
 }
+
+@media (max-width: 600px) {
+    .countdown {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .time {
+        margin: 0;
+        padding: 0;
+        transform: scale(0.9);
+    }
+
+}

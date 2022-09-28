@@ -12,7 +12,6 @@ const header = document.querySelector('.header')
 const currentYear = new Date().getFullYear()
 
 const nextYearDate = new Date(`January 01 ${currentYear + 1} 00:00:00`)
-console.log(overAllLeft)
 
 year.innerHTML = currentYear + 1
 
@@ -50,7 +49,7 @@ const runCountDown = () => {
     progressBar[2].style.width = `${progPctMinute}%`
     const progPctSecond = 1 + (secondsLeft / 60) * 100
     progressBar[3].style.width = `${progPctSecond}%`
-    console.log(progressBar[3])
+    
 
     //overalls
     const secondsLeftToNewYear = Math.floor(differenceInMilliseconds / 1000)
@@ -63,7 +62,7 @@ const runCountDown = () => {
     const hoursLeftToNewYear = Math.floor
     (differenceInMilliseconds / 1000 / 60 / 60)
     overAllLeft[0].innerHTML = `${hoursLeftToNewYear.toLocaleString()} total remaining` 
-    console.log(secondsLeftToNewYear)
+    
 
 
 
