@@ -73,7 +73,7 @@ setInterval(runCountDown, 1000)
 setTimeout(() => {
     svg.style.width = '100px'
     svg.style.height = '100px'
-    svg.style.bottom = '20px'
+    svg.style.bottom = '5px'
     svgRect.style.width = '100px'
     svgRect.style.height = '100px'
     svgRect.style.strokeWidth = '100px'
