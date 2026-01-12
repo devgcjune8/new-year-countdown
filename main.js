@@ -13,7 +13,7 @@ const currentYear = new Date().getFullYear()
 
 const nextYearDate = new Date(`January 01 ${currentYear + 1} 00:00:00`)
 
-year.innerHTML = currentYear + 1
+year.innerHTML = currentYear 
 
 const runCountDown = () => {
     const timeAsOfNow = new Date()
