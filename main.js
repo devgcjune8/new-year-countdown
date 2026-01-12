@@ -4,6 +4,8 @@ const minutes = document.querySelector('.minutes')
 const seconds = document.querySelector('.seconds')
 const year = document.querySelector('.year')
 const progressBar = document.querySelectorAll('.progress-bar')
+const longProgressBar = document.querySelector('.long-progress-bar')
+const pctYearLeft = document.querySelector('.year-pct-left')
 const overAllLeft = document.querySelectorAll('.overall-left small')
 const svg = document.querySelector('svg')
 const svgRect = document.querySelector('svg rect')
@@ -39,29 +41,36 @@ const runCountDown = () => {
         } else {
             return 365
         }
-    } 
+    }
+    
+    const progPctYear = 1 + daysLeft / checkLeapYear(currentYear) * 100
+    longProgressBar.style.width = `${progPctYear}%`
+
     //progress bars
-    const progPctDay = 1 + daysLeft / checkLeapYear(currentYear) * 100
-    progressBar[0].style.width = `${progPctDay}%`
-    const progPctHour = 1 + (hoursLeft / 24) * 100
-    progressBar[1].style.width = `${progPctHour}%`
-    const progPctMinute = 1 + (minutesLeft / 60) * 100
-    progressBar[2].style.width = `${progPctMinute}%`
-    const progPctSecond = 1 + (secondsLeft / 60) * 100
-    progressBar[3].style.width = `${progPctSecond}%`
+    //const progPctDay = 1 + daysLeft / checkLeapYear(currentYear) * 100
+    //progressBar[0].style.width = `${progPctDay}%`
+    //const progPctHour = 1 + (hoursLeft / 24) * 100
+    //progressBar[1].style.width = `${progPctHour}%`
+    //const progPctMinute = 1 + (minutesLeft / 60) * 100
+    //progressBar[2].style.width = `${progPctMinute}%`
+    //const progPctSecond = 1 + (secondsLeft / 60) * 100
+    //progressBar[3].style.width = `${progPctSecond}%`
     
 
     //overalls
+    const roundToHundredths = Math.round(progPctYear * 100) / 100; 
+    pctYearLeft.innerHTML = `${roundToHundredths}%`
+    
     const secondsLeftToNewYear = Math.floor(differenceInMilliseconds / 1000)
-    overAllLeft[2].innerHTML = `${secondsLeftToNewYear.toLocaleString()}  total remaining` 
+    overAllLeft[2].innerHTML = `${secondsLeftToNewYear.toLocaleString()} left` 
 
     const minutesLeftToNewYear = Math.floor
     (differenceInMilliseconds / 1000 / 60)
-    overAllLeft[1].innerHTML = `${minutesLeftToNewYear.toLocaleString()} total remaining` 
+    overAllLeft[1].innerHTML = `${minutesLeftToNewYear.toLocaleString()} left` 
 
     const hoursLeftToNewYear = Math.floor
     (differenceInMilliseconds / 1000 / 60 / 60)
-    overAllLeft[0].innerHTML = `${hoursLeftToNewYear.toLocaleString()} total remaining` 
+    overAllLeft[0].innerHTML = `${hoursLeftToNewYear.toLocaleString()} left` 
     
 
 

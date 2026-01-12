@@ -5,26 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>New Year Countdown
+    <title>YEAR-END COUNTDOWN
     </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
 </head>
 <body>
+    
     <div class="year"></div>
 
-    <h2 class="header">New Year Countdown</h2>
+    <h2 class="header">Year End</br>Countdown</h2>
+
+    <div class="long-progress-bar-wrapper">
+          <div class="long-progress-bar">
+            <div class="year-pct-left">
+                <small></small>
+            </div>
+          </div> 
+    </div>
 
     <div class="countdown">
+    
         <div class="time">
-            <div class="progress-wrapper">
+            <!-- <div class="progress-wrapper">
                 <div class="progress-bar"></div>
-            </div>
+            </div> -->
             <h2 class="days">00</h2>
-            <small>DAYS left</small>
+            <small>DAYS</small>
         </div>
         <div class="time">
-            <div class="progress-wrapper">
+            <!-- <div class="progress-wrapper">
                 <div class="progress-bar"></div>
-            </div>
+            </div> -->
             <h2 class="hours">00</h2>
             <small>HOURS</small>
             <div class="overall-left">
@@ -32,9 +45,9 @@
             </div>
         </div>
         <div class="time">
-            <div class="progress-wrapper">
+            <!--<div class="progress-wrapper">
                 <div class="progress-bar"></div>
-            </div>
+            </div>-->
             <h2 class="minutes">00</h2>
             <small>MINUTES</small>
             <div class="overall-left">
@@ -42,11 +55,11 @@
             </div>
         </div>
         <div class="time">
-            <div class="progress-wrapper">
+            <!-- <div class="progress-wrapper">
                 <div class="progress-bar"></div>
-            </div>
+            </div> -->
             <h2 class="seconds">00</h2>
-            <small>SECONDS</small>
+            <small>SECONDS left</small>
             <div class="overall-left">
                 <small></small>
             </div>
@@ -54,5 +67,6 @@
     </div>
     <svg><rect></rect></svg>
     <script src="./main.js"></script>
+    
 </body>
 </html>
