@@ -18,54 +18,23 @@ body {
     margin: 0;
 }
 
-@keyframes rotate {
-	100% {
-		transform: rotate(1turn);
-	}
+#top-line {
+    position: absolute;
+	left: 0;
+	height: 10px;
+     width: 95%;
+	background: #014f99;
+    animation: lineH 4s 5s infinite linear;
 }
 
-.anim-box {
-	position: relative;
-	z-index: 0;
-	width: 400px;
-	height: 300px;
-	border-radius: 10px;
-	overflow: hidden;
-	padding: 2rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-family: sans-serif;
-	font-weight: bold;
-	
-	&::before {
-		content: '';
-		position: absolute;
-		z-index: -2;
-		left: -50%;
-		top: -50%;
-		width: 200%;
-		height: 200%;
-		background-color: #399953;
-		background-repeat: no-repeat;
-		background-size: 50% 50%, 50% 50%;
-		background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-		background-image: linear-gradient(#399953, #399953), linear-gradient(#fbb300, #fbb300), linear-gradient(#d53e33, #d53e33), linear-gradient(#377af5, #377af5);
-		animation: rotate 4s linear infinite;
-	}
-	
-	&::after {
-		content: '';
-		position: absolute;
-		z-index: -1;
-		left: 6px;
-		top: 6px;
-		width: calc(100% - 12px);
-		height: calc(100% - 12px);
-		background: white;
-		border-radius: 5px;
-	}
-}
+@keyframes lineH{
+			0%{
+				width: 0%;
+			}
+			100%{
+        width: 95%;opacity: 0;
+      }
+    }
 
 .header {
     display: flex;
@@ -75,7 +44,7 @@ body {
 }
 
 h2 {
-    font-size: 3em;
+    font-size: 40px;
     letter-spacing: 4px;
     text-transform: uppercase;
     font-weight: 1000;
@@ -83,7 +52,7 @@ h2 {
 
 .long-progress-bar-wrapper {
     width: 400px;
-    height: 50px;
+    height: 120px;
     background-color: white;
     border: none;
     border-style: none;
@@ -98,6 +67,7 @@ h2 {
     left: 50%;            /* Key: Moves the left edge to the horizontal center */
   transform: translate(-50%, -50%); /* Key: Shifts the element back by half its own width and height */
    opacity: 75%;
+   border-radius: 15px;
 }
 
 .long-progress-bar-wrapper:hover {
@@ -107,23 +77,28 @@ h2 {
 .long-progress-bar {
     background-color: #1a9fdd;
     width: 0%;
-    height: 50px;
-    animation: pulse 1s infinite;
+    height: 120px;
+    border-radius: 15px;
     
 }
 
 .year-pct-left {
-    font-size: 2.5em;
-    color: rgb(251, 255, 0);
+    font-size: 50px;
+    color: rgb(255, 145, 0);
   text-shadow:
     0 0 5px rgb(255, 166, 0),
-    0 0 10px rgb(255, 187, 0),
+    0 0 10px rgb(194, 106, 5),
     0 0 20px rgb(255, 136, 0);
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulse 1s infinite;
 }
 
 @keyframes pulse {
-  0%, 100% { box-shadow: 0 0 10px rgb(253, 163, 44), 0 0 20px rgb(252, 173, 56); }
-  50% { box-shadow: 0 0 20px rgb(250, 185, 46), 0 0 40px rgb(255, 169, 40); }
+  0%, 100% { color: rgb(247, 163, 54); }
+  50% { color: rgb(250, 204, 118); }
 }
 
 .progress-wrapper {

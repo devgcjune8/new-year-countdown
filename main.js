@@ -58,7 +58,7 @@ const runCountDown = () => {
     
 
     //overalls
-    const roundToHundredths = Math.round(progPctYear * 100) / 100; 
+    const roundToHundredths = Math.round(progPctYear); 
     pctYearLeft.innerHTML = `${roundToHundredths}%`
     
     const secondsLeftToNewYear = Math.floor(differenceInMilliseconds / 1000)
