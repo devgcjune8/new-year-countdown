@@ -1,6 +1,6 @@
 # New Year Countdown
 
-![image](https://user-images.githubusercon
+
 
 https://github.com/user-attachments/assets/a85d07b3-9fbc-40d2-a83d-fbf1bc539fd3
 
